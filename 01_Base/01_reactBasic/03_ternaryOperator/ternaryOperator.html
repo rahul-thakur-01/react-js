@@ -1,0 +1,89 @@
+<!-- Change small thing inside the component not whole component using if else as we done previously  -->
+<!-- For conditional Rendring outside the component we use if else -->
+<!-- But for inside the component we use ternary , && , || operator  -->
+<!-- In js 0 , null, undefined, ""( empty string ), false , else everything is considered as true -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+
+
+
+</body>
+<script type="text/babel">
+
+    let  App  = () => {
+        let loggedIn = false;
+        let user;
+        if(loggedIn){
+            user = 'Rahul'
+        }else{
+            user = 'User'
+        }
+        return (
+            <>
+                <h2>Hello {user}</h2>
+            </>
+        )
+        return 
+    }
+
+    let App2 = () => {
+        let loggedIn = false;
+        return (
+            <>
+            <h2>Hello {loggedIn? "Rahul":"user"} </h2>
+            <p>{loggedIn && "welcome to the portal"}</p>
+            {loggedIn && <p> welcome to the portal </p>}
+            </>
+        )
+    }
+
+    //if there is both first name and last name given return last name if not return first name 
+    let App3 = () => {
+        let loggedIn = true;
+        let firstName = "Rahul";
+        let lastName = "Kumar";
+
+    return (
+        <p> {loggedIn ? (lastName || firstName) : "User is not looged In"} </p>
+    )
+    }
+    //if loggedIn is false , && operator return first falsey value and false is can't render on the screen 
+    //Remember one thing we can't use if else inside return () becuase if else does'nt return anything 
+    
+    let react = ReactDOM.createRoot(document.getElementById('root'));
+    react.render(
+        <>
+        <App />
+        <App2 />
+        <App3 />
+        </>
+    )
+
+
+</script>  
+</html>
+
+<!-- And && operator return me last truthy value & first falsey
+true && false -> false 
+false && true -> false
+"hello" && true -> true
+true && "hello" -> hello 
+true && 1 && 0 && "hello" && false -> 0 (first falsey is 0) -->
+
+<!-- Or || operator return me first truthy value & last falsey 
+true || "hello" -> true;
+"hello" || true || 0 || "" || false -> "hello"
+
+0 || false || ""  -> "" -->

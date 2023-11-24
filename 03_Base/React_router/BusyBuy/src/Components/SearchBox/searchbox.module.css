@@ -1,0 +1,21 @@
+.searchbox{
+    height: 10vh;
+    text-align: center;
+
+}
+
+.searchbox input{
+    position: absolute;
+    padding: 15px;
+    margin: 25px;
+    width: 350px;
+    border: 0px solid transparent;
+    box-shadow: 0 0 5px grey;
+    outline: none;
+    border-radius: 30px;
+    font-size: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+

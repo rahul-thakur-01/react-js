@@ -1,0 +1,16 @@
+.nav{
+    height: 10%;
+    position: fixed;
+    width: 100%;
+    background-color: #bc9bff;
+    position: fixed;
+    z-index: 10;
+
+}
+.heading{
+    font-size: 1.4rem;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-family: "Arial Rounded MT Bold";
+}

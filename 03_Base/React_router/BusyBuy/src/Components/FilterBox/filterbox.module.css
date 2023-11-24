@@ -1,0 +1,29 @@
+.filterbox{
+    border-right: 2px solid white;
+    position: fixed;
+    padding: 10px;
+    height: 100vh;
+    width: 16vw;
+}
+.checkBox input{
+    margin-right: 20px;
+}
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+
+}
+.checkBox span{
+    display: block;
+    padding: 10px;
+}
+.rangeInput{
+    padding:5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.priceRange{
+    font-size: 18px;
+    display: block;
+    margin: 5px;
+}

@@ -1,0 +1,58 @@
+.nav2{
+    padding-top: 100px;
+}
+
+.btn{
+    display: block;
+    width: 150px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #5454f8;
+    font-family: "Arial Rounded MT Bold";
+}
+.cancel{
+    background-color: #f8b7b7;
+    color:red;
+    border:3px solid red;
+    position: absolute;
+    right: 10%;
+    top:16%;
+}
+.create{
+    border: 3px solid #4c4cfd;
+    color:blue;
+    background-color: #cacafd;
+    position: absolute;
+    right: 10%;
+    top:16%;
+}
+.back{
+    border: 3px solid #4c4cfd;
+    color:blue;
+    background-color: #cacafd;
+    position: absolute;
+    left: 10%;
+    top:16%;
+}
+.heading{
+    padding-top:45px;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold";
+    font-size:2rem;
+    font-weight: 800;
+
+}
+.imageMainBox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+.addedImg{
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    background-size: cover;
+}

@@ -1,0 +1,49 @@
+.signIn{
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translateX(-50%) translateY(-50%);
+    border: 1px solid red;
+    height:30vh;
+    box-shadow: 0 0 10px grey;
+    border-radius: 10px;
+}
+.signIn input, .signIn button{
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+    border-radius: 20px;
+    border: 0 solid transparent;
+    box-shadow: 0 0 10px grey;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+}
+.signIn input{
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    border-radius: 20px;
+    border: 0 solid transparent;
+    box-shadow: 0 0 10px grey;
+    outline: none;
+}
+.signIn button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-60%);
+}
+.signIn input::placeholder{
+    text-align: center;
+}
+.newAccount{
+    position: absolute;
+    bottom: 10%;
+    font-family: 'Kanit', sans-serif;
+    cursor: pointer;
+    left:40%;
+    transform: translateX(-30%);
+    font-weight: 800;
+}

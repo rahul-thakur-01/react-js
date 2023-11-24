@@ -1,0 +1,52 @@
+.cart{
+    padding-top: 10%;
+    /* border: 1px solid red; */
+    margin:auto;
+    height: auto;
+    position: relative
+}
+.cartItem{
+    display: flex;
+}
+.heading {
+
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(red, yellow, rgb(225, 62, 190), orange);
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+}
+
+
+.tableInfo{
+    display: flex;
+    box-shadow: 0 0 10px black;
+    margin:20px;
+}
+
+.common1{
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    padding:20px;
+    /* border: 1px solid red; */
+    flex: 1;
+    width:  auto;
+    text-align: center;
+}
+  
+.common2{
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    padding:10px;
+    flex:1;
+    text-align: center;
+}
+
+

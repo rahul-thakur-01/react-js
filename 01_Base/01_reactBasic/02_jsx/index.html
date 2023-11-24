@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="root"></div>
+
+
+</body>
+<script type="text/babel">
+
+    function App(){
+        let arr = [1,2,3,4,5];
+        let obj = {
+            name: "rahul",
+            age : 10,
+        }
+        return (
+            <>
+                <h1>Array and Objects</h1>
+                <h2>{arr}</h2>
+
+                <ul>
+                    {arr.map((num,index) => (
+                    <li key ={index}>{num}</li>
+                ))}
+
+                </ul>
+                
+                <h2>{obj.name}</h2>        
+            </>
+        )
+    }
+
+    //key is property of react not a html attribute & it used for referance for later usecases`
+    // Keys are used in React to identify which items have been updated or deleted in a list. It is not a required property but is necessary to ensure good optimization.
+    //if you don't provide  key to each child of list it will give error 
+    //index is coming from js 
+    //user map and filter function
+    //object we can't directly render <h2> {obj} </h2> give error becuase object is not considedred child of react 
+    //property of objects can be render using . operator in react 
+    //we can't use for loop in jsx becuase it's not returning anything 
+
+    let arrayOfObjects = [
+        {
+            // id: 230,
+            name:'Rahul Kumar',
+            age : 20,
+            marks: 100,
+            img: "https://www.tutorialspoint.com/assets/questions/media/426142-1668760765.png"
+
+        },
+        {
+            name: 'Garv Sharma',
+            age: 21,
+            marks: 90,
+            img: "./03.png"
+        },
+        {
+            name: 'Manas Doshi',
+            age: 20,
+            marks: 8,
+            img: "./03.png"
+        }
+    ]
+
+    let  ArrayOfObjectTable = () => (
+        <>
+        <table>
+            <thead>
+                <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Marks</th>
+            </tr>
+
+            </thead>
+
+            <tbody>
+                {arrayOfObjects.map((student,index) => (
+                    <tr key = {index}>
+                        <td> <img src={student.img} alt=""/></td>
+                       
+                        <td>{student.name}</td>
+                        <td>{student.age}</td>
+                        <td>{student.marks}</td>
+                    </tr>
+                ))}
+            </tbody>
+
+            <tfoot></tfoot>
+        </table>
+        </>
+    )
+
+    function Main(){
+        return(
+            <>
+            <App />
+            <ArrayOfObjectTable />
+            </>
+        )
+    }
+
+    //conditional Rendring -> render component based on condition 
+
+    function Main2(){
+        let bool = false;
+        if(bool){
+            return <App />
+        }
+        else{
+            return (
+                <>
+                <ArrayOfObjectTable />
+                <App />
+                </>
+            )
+        }
+    }
+
+    //for object we can pass id also as key
+    //always use thead , tbody , tfooter without is also it work but it better to follow broswer or standard instruction
+    const objectPrint = ReactDOM.createRoot(document.getElementById('root'));
+    objectPrint.render(<Main2/>)
+
+//     const objectPrint = ReactDOM.createRoot(document.getElementById('root'));
+// objectPrint.render(
+//   <>
+//     <App />
+//     <ArrayOfObjectTable />
+//   </>
+// );
+
+
+</script>  
+
+
+</html>

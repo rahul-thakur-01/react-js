@@ -1,0 +1,49 @@
+.main{
+    height: 20vh;
+    width: 60vw;
+    margin:10px auto 20px auto;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding:20px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    box-shadow: 0 0 5px grey;
+
+}
+.heading{
+    display: block;
+    font-size: 1.5rem;
+    font-family: "Arial Rounded MT Bold";
+
+}
+.inputBtn{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #4c4cfd;
+    width: 60%;
+    font-size: 1rem;
+    font-family: "PT Sans Caption";
+
+}
+.btn{
+    border: 0px solid transparent;;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+    font-family: "Arial Rounded MT Bold";
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+}
+.clear{
+    background-color: red;
+}
+.create{
+    background-color: blue;
+}

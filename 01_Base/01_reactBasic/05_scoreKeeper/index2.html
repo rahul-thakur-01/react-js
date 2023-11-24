@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root" style="text-align: center;"></div>
+
+</body>
+<script type="text/babel">
+    let score = 0;
+    let wicket = 0;
+    let ballWiseRun = [];
+    let hit = 0;
+    let inputRef = React.createRef();
+
+    function  addScore(num){
+        hit = num;
+        rootElement.render(<App />);
+    }
+
+    function addWicket(){
+        hit = "W";
+        rootElement.render(<App/>);
+    }
+
+    const ScoreButton = () =>(
+        <div>
+            <button onClick = {()=>addScore(0)}>0</button>
+            <button onClick = {()=>addScore(1)}>1</button>
+            <button onClick = {()=>addScore(2)}>2</button>
+            <button onClick = {()=>addScore(3)}>3</button>
+            <button onClick = {()=>addScore(4)}>4</button>
+            <button onClick = {()=>addScore(5)}>5</button>
+            <button onClick = {()=>addScore(6)}>6</button>
+            <button onClick = {addWicket}>Wicket</button>
+        </div>
+    )
+
+    const Result = () => (
+        <div>
+            {ballWiseRun.map((run,index) => (
+                <>
+                {index%6== 0 ? <br/> : null}
+                <span key={index}>{run === 0 ? <strong>.</strong> : run}</span>&nbsp;&nbsp;
+                </>
+            ))}
+        </div> 
+    )
+
+    // we can assign html element to any variable so we can also add html element in array 
+    // we can use reactFragment also but we are using span becuase later we have to style , not using div becuase it's block and span in inline 
+    // template literal ->  `` 
+    function handleSubmit (event){
+        event.preventDefault();
+        
+        ballWiseRun.unshift(
+            // ballWiseRun.unshift(hit);
+            // <span>{hit}{"  "}{inputRef.current.value}</span>
+            <span>{`${hit}   ${inputRef.current.value}`}</span>
+        );
+        if(typeof hit == 'number') {
+            score += hit;
+        }
+        else wicket += 1;
+        console.log(inputRef);
+        console.log(inputRef.current.value);
+        hit = 0;
+        inputRef.current = "";
+        rootElement.render(<App />);
+    }
+
+    const Form = () => (
+        <form action="" onSubmit = {handleSubmit}>
+            <input value = {hit}/>
+            <input ref={inputRef} placeholder="Add a comment"/>
+            <button>SUBMIT</button>
+        </form>
+    )
+
+    // FORM HAS THE NATIVE BEHAVIOUR -> AFTER SUBMIT IT'S RESET 
+    // WE CAN CONTROL BEHAVIOUR OF NATIVE ELEMENT USING SYNTHETIC EVENT ( JUST A WRAPPER AROUND THE DOM ELEMENT EVENT ) SUBMIT BUTTON HAS INTERNAL EVENT LIKE RELOAD  
+
+    //we can to extract comment from the input tag for that we are going to createRef -> referance access the data from the dom tree create a ref of a node & then i can acess the data anywhere is the program 
+
+    //React is suggest we have to create controlled components but when we use ref that element become uncontrolled 
+    // wihtout rendering app it can change will automatically reflected 
+
+    //DANGER : 
+    // Eg. -> 
+    // if we comment render(APP) of handleSubmit function hit = 0 not get render but inputRef.current = ""; is rendered 
+    // It is not dependent on react Component , it is directly accessing the node from the dom tree
+    // which react not suggest to use , later we learn  the alternative of create a controlled component  
+    
+
+    const App = () => (
+        <>
+            <h1>SCORE KEEPER</h1>
+            <h2>SCORE : {score}/{wicket}</h2>
+            <ScoreButton/>
+            <br/>
+            <Form />
+            <hr/>
+
+            {ballWiseRun.map((run,index) => (
+                <p key = {index}> {run == 0 ? <strong>.</strong> : run} </p>
+            ))}
+        </>
+    )
+    
+
+    
+    const rootElement = ReactDOM.createRoot(document.getElementById('root'));
+    rootElement.render(<App/>)
+</script>  
+</html>
+

@@ -1,0 +1,40 @@
+.signUp{
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translateX(-50%) translateY(-50%);
+    border: 1px solid red;
+    padding-bottom: 60px;
+    box-shadow: 0 0 10px grey;
+    border-radius: 10px;
+}
+.signUp input, .signUp button{
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+    border-radius: 20px;
+    border: 0 solid transparent;
+    box-shadow: 0 0 10px grey;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+}
+.signUp input{
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    border-radius: 20px;
+    border: 0 solid transparent;
+    box-shadow: 0 0 10px grey;
+    outline: none;
+}
+.signUp button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-60%);
+}
+.signUp input::placeholder{
+    text-align: center;
+}

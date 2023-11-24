@@ -1,0 +1,40 @@
+.main{
+    min-height: 100vh;
+    height: auto;
+    padding-top: 6%;
+    /*background-color: aliceblue;*/
+    box-sizing: border-box;
+    width: 100%;
+}
+.header{
+    padding:20px 100px;
+    font-size: 1.8rem;
+    font-family: "Arial Rounded MT Bold";
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin:auto;
+}
+.btn{
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: 3px solid #4c4cfd;
+    color: #5454f8;
+    font-family: "Arial Rounded MT Bold";
+}
+.cancel{
+    background-color: #f8b7b7;
+    color:red;
+    border:3px solid red;
+}
+.create{
+    border: 3px solid #4c4cfd;
+    color:blue;
+    background-color: #cacafd;
+}
+.iconDetails{
+    width: 90%;
+    margin:auto;
+
+}

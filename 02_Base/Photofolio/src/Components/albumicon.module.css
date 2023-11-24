@@ -1,0 +1,95 @@
+
+
+.outer{
+    box-sizing:border-box;
+    height: 220px;
+    min-width:  200px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: #eceaea;
+    border: 1px solid grey;
+    font-family: "Arial Rounded MT Bold";
+    margin: 40px;
+    display: inline-block;
+    position: relative;
+
+
+
+}
+.inner{
+    background-image: url("https://t3.ftcdn.net/jpg/02/70/09/98/360_F_270099822_9zbx236dHn1hyxYNl9HSOBvpUEpU0eOz.jpg");
+    border-radius: 10px;
+    height: 150px;
+    width: 90%;
+    margin:auto;
+
+
+}
+.albumName{
+    display: block;
+    width: 85%;
+    margin:8px auto;
+    overflow: hidden;
+    padding: 10px;
+}
+.albumImg{
+    height: 100%;
+    width: 100%;
+}
+.outer:hover{
+    background-color: #bc9bff;
+
+}
+.deleteIcon{
+    color: red;
+    visibility: hidden;
+    position: absolute;
+    right: 5%;
+    bottom: 6%;
+
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    box-shadow: 0 0 4px #565656;
+    border: 2px solid red;
+}
+.editIcon{
+    color: #5959ef;
+    visibility: hidden;
+    position: absolute;
+    right: 20%;
+    bottom: 6%;
+    box-shadow: 0 0 4px #565656;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    border: 2px solid #5959ef;
+}
+.outer:hover .deleteIcon,
+.outer:hover .editIcon {
+    visibility: visible;
+}
+.editAlbumInput{
+    padding: 10px;
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid blue;
+    font-size: 1rem;
+    width:60%;
+    font-family: "Arial Rounded MT Bold";
+}
+.checkIcon{
+    color: #5959ef;
+
+    position: absolute;
+    right: 5%;
+    bottom: 6%;
+    box-shadow: 0 0 4px #565656;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    border: 2px solid #5959ef;
+}
