@@ -31,7 +31,7 @@ function App() {
           }>
 
           </Route>
-          <Route path="notes"
+          <Route path="note"
           element={
             <Fragment>
                <NavBar />
@@ -42,6 +42,9 @@ function App() {
           }>
             
             </Route>
+
+           
+
         </Routes>
        
         </BrowserRouter>
